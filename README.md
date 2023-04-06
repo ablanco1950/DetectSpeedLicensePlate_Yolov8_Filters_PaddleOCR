@@ -108,10 +108,3 @@ https://github.com/victorgzv/Lighting-correction-with-OpenCV
 
 https://medium.com/@yyuanli19/using-mnist-to-visualize-basic-conv-filtering-95d24679643e
 
-Projects with videos to download to test:
-
-https://github.com/anmspro/Traffic-Signal-Violation-Detection-System/tree/master/Resources "Traffic IP Camera video.mp4"
-
-https://github.com/hasaan21/Car-Number-Plate-Recognition-Sysytem "vid.mp4"
-
-//www.pexels.com/video/video-of-famous-landmark-on-a-city-during-daytime-1721294/ "Pexels Videos 1721294.mp4"
