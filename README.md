@@ -31,21 +31,19 @@ since speed detection is performed over a region of the video, marked with a gre
 
 As a result, the console gets the following output:
 
-AR606L Speed: 27.0Kmh snapshots: 3
+AR606L Speed: 27.0Km/h snapshots: 3
 
-EAR6061 Speed: 81.0Kmh snapshots: 1
+EAR6061 Speed: 81.0Km/h snapshots: 1
 
-AE670S Speed: 81.0Kmh snapshots: 1
+AE670S Speed: 81.0Km/h snapshots: 1
 
-APHI88 Speed: 81.0Kmh snapshots: 1
+APHI88 Speed: 81.0Km/h snapshots: 2
 
-A3K96 Speed: 40.5Kmh snapshots: 2
+A3K961 Speed: 81.0Km/h snapshots: 1
 
-A3K961 Speed: 81.0Kmh snapshots: 1
+A968B6 Speed: 40.5Km/h snapshots: 2
 
-A968B6 Speed: 40.5Kmh snapshots: 2
-
-AV6190 Speed: 40.5Kmh snapshots: 2
+AV6190 Speed: 40.5Km/h snapshots: 2
 
 
 In which it is verified that the speed is determined by the number of snapshots in the delimited region of interest and errors coming from false registration detections such as EAR6061 that is a false registration and A3k961 that only detects a snapshot because there are snapshots in which is detected as A3K96
