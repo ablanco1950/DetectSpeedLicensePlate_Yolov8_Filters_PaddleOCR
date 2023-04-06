@@ -757,7 +757,7 @@ with open( "VIDEOLicenseResults.txt" ,"w") as   w:
           Snapshots= ContLicensesmax[j]
           Speed=lenthRegion * fpsReal * 3.6 / Snapshots
           #print(TabLicensesmax[j] + " snapshots: "+  str(ContLicensesmax[j]) + " Duration = "+str(Duration))
-          print(TabLicensesmax[j] + " Speed: "+  str(Speed) + "Kmh " +  " snapshots: "+  str(Snapshots) )
+          print(TabLicensesmax[j] + " Speed: "+  str(Speed) + "Km/h " +  " snapshots: "+  str(Snapshots) )
           lineaw1=[]
           lineaw1.append(TabLicensesmax[j]) 
           lineaw1.append(str(ContLicensesmax[j])) 
