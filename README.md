@@ -64,6 +64,12 @@ and a summary file: VIDEOLicenseSummary.txt with the following fields:
 
 References:
 
+https://github.com/amanraja/vehicle-speed-detection-
+
+https://www.ijcseonline.org/pub_paper/124-IJCSE-06271.pdf
+
+https://medium.com/@raja_8462/an-efficient-approach-for-vehicle-speed-detection-1fce82aacaf2
+
 https://pypi.org/project/paddleocr/
 
 https://learnopencv.com/ultralytics-yolov8/#How-to-Use-YOLOv8?
