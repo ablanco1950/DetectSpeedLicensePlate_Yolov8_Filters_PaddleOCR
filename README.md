@@ -3,6 +3,11 @@ This work is an extension of the project https://github.com/ablanco1950/LicenseP
 
 The requirements are exactly the same as those indicated in the aforementioned project.
 
+Downloaded the project, execute the pythom program
+
+VIDEODetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR.py
+
+
 The test program VIDEODetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR.py is only prepared to work with the attached Traffic IP Camera video.mp4 test video, since speed detection is performed over a region of the video, marked with a green rectangle, whose depth coincides with the length of a parking space that appears in the video and according to the following formula and parameters:
 
 """
@@ -48,7 +53,7 @@ You also get a logging file VIDEOLicenseResults.txt with the detected license pl
 
 and a summary file: VIDEOLicenseSummary.txt with the following fields:
 
--License detected
+- License detected
 - number of snapshots in the region of interest
 - time of first snapshot
 - last snapshot time
