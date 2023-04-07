@@ -46,9 +46,9 @@ A968B6 Speed: 40.5Km/h snapshots: 2
 AV6190 Speed: 40.5Km/h snapshots: 2
 
 
-In which it is verified that the speed is determined by the number of snapshots in the delimited region of interest and errors coming from false registration detections such as EAR6061 that is a false registration and A3k961 that only detects a snapshot because there are snapshots in which is detected as A3K96
+In which it is verified that the speed is determined by the number of snapshots in the delimited region of interest and errors coming from false registration detections such as EAR6061 that is a false registration of AR606L, and A3k961 that only detects a snapshot because there are snapshots in which is detected as A3K96
 
-A camera with more frames per second is needed, a computer  with better features and better license plate detection.
+A camera with more frames per second is needed, a computer  with better features and better license plate detection. And/or a routine that will detect similarities between two consecutive license plates and flag them as erroneous.
 
 You also get a logging file VIDEOLicenseResults.txt with the detected license plates
 
