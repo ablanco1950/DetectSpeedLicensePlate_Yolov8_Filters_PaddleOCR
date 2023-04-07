@@ -27,7 +27,7 @@ since speed detection is performed over a region of the video, marked with a gre
 
            Speed (Km/hour)=lenthRegion * fpsReal * 3.6 / Snapshots
 
-          Where 3.6 = (3600 sec./ 1 minute) / (1Km/ 1000m)
+          Where 3.6 = (3600 sec./ 1 hour) / (1Km/ 1000m)
 
 As a result, the console gets the following output:
 
