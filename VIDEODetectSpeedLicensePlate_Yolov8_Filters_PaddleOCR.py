@@ -75,7 +75,8 @@ Y_resize=70
 
 
 import imutils
-Poligono=[[200,500],[200,700],[1250,700],[1250,500]]
+#Poligono=[[200,500],[200,700],[1250,700],[1250,500]]
+Poligono=[[200,485],[200,655],[1250,655],[1250,485]]
 from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
 polygon1 = Polygon(Poligono)
@@ -365,7 +366,7 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
                print(License + " detected with Filter image concat "+ text) 
     
     
-    
+    """
     kernel = np.ones((3,3),np.float32)/90
     gray1 = cv2.filter2D(gray,-1,kernel)   
     #gray_clahe = cv2.GaussianBlur(gray, (5, 5), 0) 
@@ -391,7 +392,7 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
                 print(License + " detected with CLAHE and THRESH_TOZERO as "+ text) 
     
     
-    
+    """
     for z in range(5,6):
     
        kernel = np.array([[0,-1,0], [-1,z,-1], [0,-1,0]])
@@ -412,7 +413,7 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
            else:
                print(License + " detected with Sharpen filter z= "  +str(z) + " as "+ text) 
       
-    
+    """
     gray_img_clahe=ApplyCLAHE(gray)
     
     th=OTSU_Threshold(gray_img_clahe)
@@ -436,7 +437,7 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
             else:
                 print(License + " detected with Otsu's thresholding of cv2 and THRESH_TRUNC as "+ text) 
    
-    
+    """
     threshold=ThresholdStable(gray)
     ret, gray1=cv2.threshold(gray,threshold,255,  cv2.THRESH_TRUNC) 
     #gray1 = cv2.GaussianBlur(gray1, (1, 1), 0)
