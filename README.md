@@ -5,7 +5,7 @@ The requirements are exactly the same as those indicated in the aforementioned p
 
 Downloaded the project, execute the pythom program
 
-VIDEODetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR.py
+VIDEODetectSpeed_and_ Counter_LicensePlate_Yolov8_Filters_PaddleOCR.py
 
 
 The test program VIDEODetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR.py is only prepared to work with the attached Traffic IP Camera video.mp4 test video,
@@ -61,6 +61,27 @@ and a summary file: VIDEOLicenseSummary.txt with the following fields:
 - time of first snapshot
 - last snapshot time
 - estimated speed
+
+And the car`s counter
+
+The main problem with this tracking method is that it depends directly on the detection of the license plate.
+You can compare the results with those obtained with the tracking functions incorporated in the new ultralytics versions by running
+TestCounterUltralytics.py
+
+For that you must have an upgraded version of otralytics and the proper version of lap
+
+inside conda in the scripts directory of the user environment
+
+python pip-script.py install --no-cache-dir "lapx>=0.5.2"
+
+upgrade ultralytics
+
+python pip-script.py install --upgrade ultralytics
+
+To see the results it is better to watch the output video
+
+object_counting_output.avi
+
 
 References:
 
