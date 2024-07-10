@@ -65,10 +65,11 @@ and a summary file: VIDEOLicenseSummary.txt with the following fields:
 And the car`s counter
 
 The main problem with this tracking method is that it depends directly on the detection of the license plate.
-You can compare the results with those obtained with the tracking functions incorporated in the new ultralytics versions by running
+You can compare the results with those obtained with the tracking functions incorporated in the new ultralytics versions by running:
+
 TestCounterUltralytics.py
 
-For that you must have an upgraded version of otralytics and the proper version of lap
+For that you must have an upgraded version of ultralytics and the proper version of lap
 
 inside conda in the scripts directory of the user environment
 
