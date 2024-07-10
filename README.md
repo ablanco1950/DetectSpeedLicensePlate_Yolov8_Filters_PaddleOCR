@@ -109,6 +109,15 @@ https://machinelearningprojects.net/number-plate-detection-using-yolov7/
 
 https://github.com/ablanco1950/LicensePlate_Yolov8_MaxFilters
 
+Tracking and Counting:
+
+https://github.com/pderrenger/pderrenger
+
+https://github.com/orgs/ultralytics/discussions/8112  (example from pderrenger)
+
+https://towardsdatascience.com/mastering-object-counting-in-videos-3d49a9230bd2
+
+
 Filters:
 
 https://gist.github.com/endolith/334196bac1cac45a4893#
