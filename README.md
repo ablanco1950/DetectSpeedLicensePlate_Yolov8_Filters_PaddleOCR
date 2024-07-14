@@ -124,6 +124,11 @@ https://machinelearningprojects.net/number-plate-detection-using-yolov7/
 
 https://github.com/ablanco1950/LicensePlate_Yolov8_MaxFilters
 
+https://docs.ultralytics.com/guides/speed-estimation/
+
+https://www.ultralytics.com/es/blog/ultralytics-yolov8-for-speed-estimation-in-computer-vision-projects
+
+
 https://blog.roboflow.com/estimate-speed-computer-vision/
 
 Tracking and Counting:
@@ -135,10 +140,6 @@ https://github.com/pderrenger?tab=repositories
 https://github.com/orgs/ultralytics/discussions/8112  (example from pderrenger)
 
 https://towardsdatascience.com/mastering-object-counting-in-videos-3d49a9230bd2
-
-https://docs.ultralytics.com/guides/speed-estimation/
-
-https://www.ultralytics.com/es/blog/ultralytics-yolov8-for-speed-estimation-in-computer-vision-projects
 
 
 Filters:
