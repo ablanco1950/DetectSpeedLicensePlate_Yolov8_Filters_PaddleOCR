@@ -64,9 +64,21 @@ and a summary file: VIDEOLicenseSummary.txt with the following fields:
 
 And the car`s counter
 
-The main problem with this tracking method is that it depends directly on the detection of the license plate.
-You can compare the results with those obtained with the tracking functions incorporated in the new ultralytics versions by running:
+The main advantage of this method is that it seems to be insensitive to the load that the computer that executes it is supporting, which allows the observed values ​​to be adjusted.
 
+The same thing doesn't seem to happen when running:
+
+SpeedEstimationUltralytics.py
+
+copied from https://docs.ultralytics.com/guides/speed-estimation/
+
+in which the speeds vary at different execution times of the program.
+
+At https://www.ultralytics.com/es/blog/ultralytics-yolov8-for-speed-estimation-in-computer-vision-projects
+It is indicated that the results depend on the speed of the GPU
+
+With respect the  tracking method  depends directly on the detection of the license plate. It is more precise but produces errors if the license plate is detected incorrectly.
+You can compare the results with those obtained with the tracking functions incorporated in the new ultralytics versions by running:
 TestCounterUltralytics.py
 
 For that you must have an upgraded version of ultralytics and the proper version of lap
@@ -119,6 +131,10 @@ https://github.com/pderrenger?tab=repositories
 https://github.com/orgs/ultralytics/discussions/8112  (example from pderrenger)
 
 https://towardsdatascience.com/mastering-object-counting-in-videos-3d49a9230bd2
+
+https://docs.ultralytics.com/guides/speed-estimation/
+
+https://www.ultralytics.com/es/blog/ultralytics-yolov8-for-speed-estimation-in-computer-vision-projects
 
 
 Filters:
