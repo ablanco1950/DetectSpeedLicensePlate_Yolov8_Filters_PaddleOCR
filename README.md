@@ -95,6 +95,8 @@ To see the results it is better to watch the output video
 
 object_counting_output.avi
 
+It is expected to improve the results in subsequent versions by applying the specifications that appear in https://blog.roboflow.com/estimate-speed-computer-vision/ and others
+
 
 References:
 
@@ -121,6 +123,8 @@ https://medium.com/adevinta-tech-blog/text-in-image-2-0-improving-ocr-service-wi
 https://machinelearningprojects.net/number-plate-detection-using-yolov7/
 
 https://github.com/ablanco1950/LicensePlate_Yolov8_MaxFilters
+
+https://blog.roboflow.com/estimate-speed-computer-vision/
 
 Tracking and Counting:
 
