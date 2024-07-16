@@ -77,7 +77,7 @@ in which the speeds vary at different execution times of the program.
 At https://www.ultralytics.com/es/blog/ultralytics-yolov8-for-speed-estimation-in-computer-vision-projects
 It is indicated that the results depend on the speed of the GPU
 
-With respect the  tracking method  depends directly on the detection of the license plate. It is more precise but produces errors if the license plate is detected incorrectly.
+With respect the  tracking method,  depends directly on the detection of the license plate. It is more precise but produces errors if the license plate is detected incorrectly.
 You can compare the results with those obtained with the tracking functions incorporated in the new ultralytics versions by running:
 TestCounterUltralytics.py
 
