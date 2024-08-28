@@ -95,9 +95,13 @@ To see the results it is better to watch the output video
 
 object_counting_output.avi
 
-A test has also been performed using sahi prediction integrated with yolov8 (https://docs.ultralytics.com/es/guides/sahi-tiled-inference/)
+A test has also been performed using sahi prediction integrated with yolov8
 
-Wwhich can be verified (You need to install sahi:pip install -U ultralytics sahi)by running:
+(https://docs.ultralytics.com/es/guides/sahi-tiled-inference/)
+
+Which can be verified by running:
+
+(You need to have installed sahi: pip install -U ultralytics sahi )
 
 VIDEODetectSpeed_and_ Counter_LicensePlate_SahiYolov8_Filters_PaddleOCR.py
 
@@ -151,6 +155,16 @@ https://towardsdatascience.com/mastering-object-counting-in-videos-3d49a9230bd2
 
 https://docs.ultralytics.com/es/guides/sahi-tiled-inference/
 
+citations and thanks:
+
+@article{akyon2022sahi,
+  title={Slicing Aided Hyper Inference and Fine-tuning for Small Object Detection},
+  author={Akyon, Fatih Cagatay and Altinuc, Sinan Onur and Temizel, Alptekin},
+  journal={2022 IEEE International Conference on Image Processing (ICIP)},
+  doi={10.1109/ICIP46576.2022.9897990},
+  pages={966-970},
+  year={2022}
+}
 
 Filters:
 
@@ -177,4 +191,5 @@ https://felipemeganha.medium.com/detecting-handwriting-regions-with-opencv-and-p
 https://github.com/victorgzv/Lighting-correction-with-OpenCV
 
 https://medium.com/@yyuanli19/using-mnist-to-visualize-basic-conv-filtering-95d24679643e
+
 
