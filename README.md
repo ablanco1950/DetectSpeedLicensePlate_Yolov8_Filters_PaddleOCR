@@ -140,8 +140,19 @@ https://docs.ultralytics.com/guides/speed-estimation/
 
 https://www.ultralytics.com/es/blog/ultralytics-yolov8-for-speed-estimation-in-computer-vision-projects
 
-
 https://blog.roboflow.com/estimate-speed-computer-vision/
+
+citations and thanks:
+
+@article{akyon2022sahi,
+  title={Slicing Aided Hyper Inference and Fine-tuning for Small Object Detection},
+  author={Akyon, Fatih Cagatay and Altinuc, Sinan Onur and Temizel, Alptekin},
+  journal={2022 IEEE International Conference on Image Processing (ICIP)},
+  doi={10.1109/ICIP46576.2022.9897990},
+  pages={966-970},
+  year={2022}
+}
+
 
 Tracking and Counting:
 
@@ -155,16 +166,6 @@ https://towardsdatascience.com/mastering-object-counting-in-videos-3d49a9230bd2
 
 https://docs.ultralytics.com/es/guides/sahi-tiled-inference/
 
-citations and thanks:
-
-@article{akyon2022sahi,
-  title={Slicing Aided Hyper Inference and Fine-tuning for Small Object Detection},
-  author={Akyon, Fatih Cagatay and Altinuc, Sinan Onur and Temizel, Alptekin},
-  journal={2022 IEEE International Conference on Image Processing (ICIP)},
-  doi={10.1109/ICIP46576.2022.9897990},
-  pages={966-970},
-  year={2022}
-}
 
 Filters:
 
