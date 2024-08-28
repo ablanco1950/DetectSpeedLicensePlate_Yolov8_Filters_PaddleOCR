@@ -95,8 +95,12 @@ To see the results it is better to watch the output video
 
 object_counting_output.avi
 
-A test has also been performed using sahi prediction integrated with yolov8 (https://docs.ultralytics.com/es/guides/sahi-tiled-inference/), which can be verified by running:
+A test has also been performed using sahi prediction integrated with yolov8 (https://docs.ultralytics.com/es/guides/sahi-tiled-inference/)
+
+Wwhich can be verified (You need to install sahi:pip install -U ultralytics sahi)by running:
+
 VIDEODetectSpeed_and_ Counter_LicensePlate_SahiYolov8_Filters_PaddleOCR.py
+
 The results, barring error or omission, are worse
 
 It is expected to improve the results in subsequent versions by applying the specifications that appear in https://blog.roboflow.com/estimate-speed-computer-vision/ and others
@@ -144,6 +148,8 @@ https://github.com/pderrenger?tab=repositories
 https://github.com/orgs/ultralytics/discussions/8112  (example from pderrenger)
 
 https://towardsdatascience.com/mastering-object-counting-in-videos-3d49a9230bd2
+
+https://docs.ultralytics.com/es/guides/sahi-tiled-inference/
 
 
 Filters:
