@@ -49,6 +49,9 @@ model = YOLO(dirnameYolo)
 class_list = model.model.names
 #print(class_list)
 
+from sahi.predict import get_sliced_prediction
+from sahi import AutoDetectionModel
+
 
 ######################################################################
 from paddleocr import PaddleOCR
@@ -75,25 +78,14 @@ Y_resize=70
 
 
 import imutils
-#Poligono=[[200,500],[200,700],[1250,700],[1250,500]]
-Poligono=[[200,485],[200,655],[1250,655],[1250,485]]
+
+Poligono=[[300,485],[300,855],[1250,855],[1250,485]]
+
+
 from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
 polygon1 = Polygon(Poligono)
 
-#TabTotHitsFilter=[]
-#TabTotFailuresFilter=[]
-
-#for j in range(7):
-#    TabTotHitsFilter.append(0)
-#    TabTotFailuresFilter.append(0)
-#####################################################################
-"""
-Copied from https://gist.github.com/endolith/334196bac1cac45a4893#
-
-other source:
-    https://stackoverflow.com/questions/46084476/radon-transformation-in-python
-"""
 
 from skimage.transform import radon
 
@@ -340,11 +332,6 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
     AccuraccyMin=0.7
     TotHits=0
   
-    # https://medium.com/practical-data-science-and-engineering/image-kernels-88162cb6585d
-    #kernel = np.array([[0, -1, 0],
-    #               [-1, 5, -1],
-    #               [0, -1, 0]])
-   
     
     kernel = np.array([[0, -1, 0],
                    [-1,10, -1],
@@ -533,40 +520,58 @@ def ApendTabLicensesFounded (TabLicensesFounded, ContLicensesFounded, text):
 
 # ttps://medium.chom/@chanon.krittapholchai/build-object-detection-gui-with-yolov8-and-pysimplegui-76d5f5464d6c
 def DetectLicenseWithYolov8 (img):
-  
+# https://docs.ultralytics.com/es/guides/sahi-tiled-inference/#handling-prediction-results  
     TabcropLicense=[]
     y=[]
     yMax=[]
     x=[]
     xMax=[]
-    results = model.predict(img)
+    cv2.imwrite("pp.jpg",img)
+    detection_model = AutoDetectionModel.from_pretrained(
+        model_type="yolov8",
+        model_path="best.pt",
+        confidence_threshold=0.3,
+        device="cpu",  # or 'cuda:0'
+    )
+
+    from sahi.predict import get_prediction
+
+    # With an image path
+    result = get_prediction("pp.jpg", detection_model)
+    
+    
+    # Access the object prediction list
+    object_prediction_list = result.object_prediction_list
+
+    # Convert to COCO annotation, COCO prediction, imantics, and fiftyone formats
+    results = result.to_coco_annotations()[:3]
+    
+    #print("Longitud results = " + str(len(results)))
     for i in range(len(results)):
         # may be several plates in a frame
         result=results[i]
-        
-        xyxy= result.boxes.xyxy.numpy()
-        confidence= result.boxes.conf.numpy()
-        class_id= result.boxes.cls.numpy().astype(int)
+        # print(result)        
+        box= result["bbox"]
+        confidence= result['score']
+        class_id=  result['category_id']
         # Get Class name
-        class_name = [class_list[z] for z in class_id]
-        # Pack together for easy use
-        sum_output = list(zip(class_name, confidence,xyxy))
-        # Copy image, in case that we need original image for something
+        class_name = result['category_name']
+       
         out_image = img.copy()
-        for run_output in sum_output :
-            # Unpack
-            #print(class_name)
-            label, con, box = run_output
-            if label == "vehicle":continue
-            cropLicense=out_image[int(box[1]):int(box[3]),int(box[0]):int(box[2])]
-            #cv2.imshow("Crop", cropLicense)
-            #cv2.waitKey(0)
-            TabcropLicense.append(cropLicense)
-            y.append(int(box[1]))
-            yMax.append(int(box[3]))
-            x.append(int(box[0]))
-            xMax.append(int(box[2]))
+       
+        if class_name == "vehicle":continue
         
+        # COCO notation Xmin, Ymin, Width, Height
+        cropLicense=out_image[int(box[1]):int(box[1]+box[3]),int(box[0]):int(box[0]+box[2])]
+        
+
+        # COCO notation Xmin, Ymin, Width, Height
+        TabcropLicense.append(cropLicense)
+        y.append(int(box[1]))
+        yMax.append(int(box[1]) + int(box[3]))
+        x.append(int(box[0]))
+        xMax.append(int(box[0]) + int(box[2]))
+               
     return TabcropLicense, y,yMax,x,xMax
 
 
@@ -639,14 +644,23 @@ with open( "VIDEOLicenseResults.txt" ,"w") as   w:
                 #if len(TabImgSelect) > 1:
                 #    gray=TabImgSelect[1]
                 #cv2.imshow('Frame', gray)
-                if(polygon1.contains(Point(int((x[i]+xMax[i])/2),int((y[i]+yMax[i])/2)))):
+                Xcenter=int((x[i]+xMax[i])/2) + 100
+                Ycenter=int((y[i]+yMax[i])/2) 
+                #print("Xcenter=" + str(Xcenter))
+                #print("Ycenter=" + str(Ycenter))
+                #if(polygon1.contains(Point(int((x[i]+xMax[i])/2),int((y[i]+yMax[i])/2)))):
+                if(polygon1.contains(Point(Xcenter, Ycenter))):    
                     pp=0
+                    
                 else:
                     cv2.imshow('Frame', img)
-                # Press Q on keyboard to exit
+                    # Press Q on keyboard to exit
                     if cv2.waitKey(25) & 0xFF == ord('q'): break 
                     # saving video
-                    video_writer.write(img)  
+                    video_writer.write(img)
+                    #print( "Xcenter = " + str(int((x[i]+xMax[i])/2)))
+                    #print( "Ycenter = " + str(int((y[i]+yMax[i])/2)))
+                   
                     continue
            
                 #cv2.waitKey(0)
@@ -740,9 +754,7 @@ with open( "VIDEOLicenseResults.txt" ,"w") as   w:
                     
                     break
                    
-                    #print(TabLicensesmax)
-                    #print(ContLicensesmax)
-                    #break
+                   
      cap.release()
      video_writer.release()
      cv2.destroyAllWindows()
@@ -752,17 +764,7 @@ with open( "VIDEOLicenseResults.txt" ,"w") as   w:
           if ContLicensesmax[j] < LimitSnapshot:continue
           if TabLicensesmax[j] == "":continue
           Duration=TimeEndLicensesmax[j]-TimeIniLicensesmax[j]
-          #Duration=Duration/ContLicensesmax[j]
-          """
-          SpeedUpFrames=5
-          # to increase speed, jump frames  
-          ContFramesJumped=0
-          fps=25 #frames per second of video dirvideo, see its properties
-          fpsReal= fps/SpeedUpFrames # To speed up the process only one of SpeedUpFrames
-                                     # is considered
-          lenthRegion=4.5 #the depth of the considered region corresponds
-                          # to the length of a parking space which is usually 4.5m    
-          """
+          
           Snapshots= ContLicensesmax[j]
           Speed=lenthRegion * fpsReal * 3.6 / Snapshots
           #print(TabLicensesmax[j] + " snapshots: "+  str(ContLicensesmax[j]) + " Duration = "+str(Duration))
