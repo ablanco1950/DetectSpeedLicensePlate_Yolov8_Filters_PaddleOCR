@@ -109,6 +109,33 @@ The results, barring error or omission, are worse
 
 It is expected to improve the results in subsequent versions by applying the specifications that appear in https://blog.roboflow.com/estimate-speed-computer-vision/ and others
 
+12/12/2024
+==========
+
+Another way to estimate speeds in cars is by running this simple program:
+
+python SpeedUltralyticsSolutions.py
+
+Copied from the article:
+
+https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-tracking?utm_source=newsletter&utm_medium=email&utm_term=2024-11-29&utm_campaign=+Ultralytics+Unplugged+-+Snapshot+2
+
+Although it requires creating a separate environment to avoid incompatibilities between yolov8 and yolov11.
+
+In this new environment yolov11 is installed by downloading the latest version of ultralytics
+
+pip install ultralytics
+
+There may be incompatibilities with the installed version of numpy, so you should downgrade it;
+
+pip install numpy==1.23
+
+You should also install:
+
+pip install --no-cache-dir "shapely>=2.0.0"
+pip install --no-cache-dir "lapx>=0.5.2"
+The results are similar to those of the other tests, although the estimated speeds seem lower.
+
 
 References:
 
@@ -192,5 +219,9 @@ https://felipemeganha.medium.com/detecting-handwriting-regions-with-opencv-and-p
 https://github.com/victorgzv/Lighting-correction-with-OpenCV
 
 https://medium.com/@yyuanli19/using-mnist-to-visualize-basic-conv-filtering-95d24679643e
+
+https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-tracking?utm_source=newsletter&utm_medium=email&utm_term=2024-11-29&utm_campaign=+Ultralytics+Unplugged+-+Snapshot+2
+
+
 
 
