@@ -133,7 +133,9 @@ pip install numpy==1.23
 You should also install:
 
 pip install --no-cache-dir "shapely>=2.0.0"
+
 pip install --no-cache-dir "lapx>=0.5.2"
+
 The results are similar to those of the other tests, although the estimated speeds seem lower.
 
 
