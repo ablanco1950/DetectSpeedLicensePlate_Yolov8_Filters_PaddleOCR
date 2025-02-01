@@ -143,6 +143,9 @@ References:
 
 https://github.com/amanraja/vehicle-speed-detection-
 
+In this article on vehicle speed detection in videos from snapshots of detected license plates, a formula is established to determine the speed based on the number of snapshots:
+https://medium.com/towards-artificial-intelligence/image-processing-based-vehicle-number-plate-detection-and-speeding-radar-aa375952d0f6
+
 https://www.ijcseonline.org/pub_paper/124-IJCSE-06271.pdf
 
 https://medium.com/@raja_8462/an-efficient-approach-for-vehicle-speed-detection-1fce82aacaf2
