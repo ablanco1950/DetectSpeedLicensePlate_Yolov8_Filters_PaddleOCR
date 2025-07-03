@@ -138,6 +138,23 @@ pip install --no-cache-dir "lapx>=0.5.2"
 
 The results are similar to those of the other tests, although the estimated speeds seem lower.
 
+03/07/2025
+Taking advantage of the features of the roboflow tracker that appeared in the article https://medium.com/@harunkurtdev/real-time-object-detection-and-tracking-with-yolo-and-roboflow-trackers-a-complete-python-8a9cd8d16ee3, this version is implemented that seems to detect speeds with greater precision and independently of the computer load.
+
+python DetectSpeed_RoboflowTracker.py
+
+The results appear in the console in this format:
+
+ID 2 Snapshots = 18  22 Km/h
+ID 3 Snapshots = 17  23 Km/h
+ID 5 Snapshots = 19  21 Km/h
+ID 8 Snapshots = 11  36 Km/h
+ID -1 Snapshots = 2  202 Km/h
+ID 10 Snapshots = 25  16 Km/h
+ID 11 Snapshots = 9  45 Km/h
+ID 12 Snapshots = 19  21 Km/h
+
+
 
 References:
 
@@ -173,6 +190,8 @@ https://blog.roboflow.com/estimate-speed-computer-vision/
 
 In this article on vehicle speed detection in videos from snapshots of detected license plates, a formula is established to determine the speed based on the number of snapshots:
 https://medium.com/towards-artificial-intelligence/image-processing-based-vehicle-number-plate-detection-and-speeding-radar-aa375952d0f6
+
+https://medium.com/@harunkurtdev/real-time-object-detection-and-tracking-with-yolo-and-roboflow-trackers-a-complete-python-8a9cd8d16ee3
 
 
 citations and thanks:
