@@ -163,6 +163,23 @@ ID 11 Snapshots = 9  45 Km/h
 
 ID 12 Snapshots = 19  21 Km/h
 
+05/07/2025
+
+We are trying to improve the previous version by obtaining the license plate number:
+
+python DetectSpeed_Plate_RoboflowTracker.py
+
+ID 3 Snapshots = 9   45 Km/h  Plate:AR606L
+ID 4 Snapshots = 15   27 Km/h  Plate:AR606L
+ID 6 Snapshots = 17   23 Km/h  Plate:AE670S
+ID 8 Snapshots = 9   45 Km/h  Plate:APHI88
+ID -1 Snapshots = 1   405 Km/h  Plate:
+ID 9 Snapshots = 8   50 Km/h  Plate:A3K961
+ID 10 Snapshots = 6   67 Km/h  Plate:A968B6
+ID 11 Snapshots = 11   36 Km/h  Plate:AV6190
+
+ID 3 and ID4 are the same car, once identified as car and another as truck the calculate speed is not real.
+ID -1 is a False ID produced by tracker
 
 
 
