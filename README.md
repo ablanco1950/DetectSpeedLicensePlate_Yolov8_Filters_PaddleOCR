@@ -3,6 +3,8 @@ This work is an extension of the project https://github.com/ablanco1950/LicenseP
 
 The requirements are exactly the same as those indicated in the aforementioned project.
 
+A requirements.txt file is attatched.( paddleocr gives some warnings but works)
+
 This presentation participated in a Ready Tensor tournament and has since been updated to feature and leverage improvements brought by Roboflow and Ultralytics.
 
 Downloaded the project, execute the pythom program
