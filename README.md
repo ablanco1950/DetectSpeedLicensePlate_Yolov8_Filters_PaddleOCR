@@ -5,12 +5,37 @@ The requirements are exactly the same as those indicated in the aforementioned p
 
 A requirements.txt file is attatched.( paddleocr gives some warnings but works)
 
-This presentation participated in a Ready Tensor tournament and has since been updated to feature and leverage improvements brought by Roboflow and Ultralytics.
+Of all the tests performed, the one that seems most suitable is based on establishing the speed based on the distances between the current x2 y2 points of the ID assigned by the roboflow tracker and the x2y2 assigned by the tracker in the previous frame, and dividing by the time between frames.
 
-Downloaded the project, execute the pythom program
+Execute the program 
+
+python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py
+
+the results and comparison with the method based on the number of snapshots in which the car has been detected are:
+
+ID 2 AR606L speed by Snapshots = 18 22 Km/h, by pixel distance = 49. Km/h
+ID 3 AR606L speed by Snapshots = 17.23 Km/h, by pixel distance = 37. Km/h
+ID 5 AE670S speed by Snapshots = 18 22 Km/h, by pixel distance = 40. Km/h
+ID 8 APHI88 speed by Snapshots = 9 45 Km/h, by pixel distance = 122 Km/h
+ID -1 APHI88 speed by Snapshots = 1 405 Km/h, by pixel distance = 0 Km/h
+ID 10 A3K96 speed by Snapshots = 14 28 Km/h, by pixel distance = 67. Km/h
+ID 11 A968B6 speed by Snapshots = 5 81 Km/h, by pixel distance = 41. Km/h
+ID 12 AV6190 speed by Snapshots = 12.33 Km/h, by pixel distance = 70. Km/h
+
+prepared to work with the attached Traffic IP Camera video.mp4 test video
+
+ID 3 and ID4 are the same car, once identified as car and another as truck the calculate speed is not real.
+
+ID -1 is a False ID produced by tracker
+======================================================================================================================
+
+Before, order by test date:
+
+tests based on number of snapshots.
 
 VIDEODetectSpeed_and_ Counter_LicensePlate_Yolov8_Filters_PaddleOCR.py
 
+This presentation participated in a Ready Tensor tournament and has since been updated to feature and leverage improvements brought by Roboflow and Ultralytics.
 
 The test program VIDEODetectSpeed_and_ Counter_LicensePlate_Yolov8_Filters_PaddleOCR.py is only prepared to work with the attached Traffic IP Camera video.mp4 test video,
 dowloaded from 
@@ -191,6 +216,35 @@ ID 11 Snapshots = 11   36 Km/h  Plate:AV6190
 ID 3 and ID4 are the same car, once identified as car and another as truck the calculate speed is not real.
 
 ID -1 is a False ID produced by tracker
+
+08/07/2025
+
+New test based on establishing the speed based on the distances between the current x2 y2 points of the ID assigned by the roboflow tracker and the x2 y2 assigned by the tracker (Pixel distance) in the previous frame, and dividing by the time between frames:
+
+python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py
+
+the results are:
+
+ID 2 AR606L speed by Snapshots = 18 22 Km/h, by pixel distance = 49. Km/h
+
+ID 3 AR606L speed by Snapshots = 17.23 Km/h, by pixel distance = 37. Km/h
+
+ID 5 AE670S speed by Snapshots = 18 22 Km/h, by pixel distance = 40. Km/h
+
+ID 8 APHI88 speed by Snapshots = 9 45 Km/h, by pixel distance = 122 Km/h
+
+ID -1 APHI88 speed by Snapshots = 1 405 Km/h, by pixel distance = 0 Km/h
+
+ID 10 A3K96 speed by Snapshots = 14 28 Km/h, by pixel distance = 67. Km/h
+
+ID 11 A968B6 speed by Snapshots = 5 81 Km/h, by pixel distance = 41. Km/h
+
+ID 12 AV6190 speed by Snapshots = 12.33 Km/h, by pixel distance = 70. Km/h
+
+ID3 and ID4 are the same car, once identified as car and another as truck .
+
+ID -1 is a False ID produced by tracker
+
 
 The results should be tested with real cases to verify their accuracy or approximation.
 
