@@ -34,12 +34,14 @@ prepared to work with the attached Traffic IP Camera video.mp4 test video
 
 ID 3 and ID4 are the same car, once identified as car and another as truck the calculate speed is not real.
 
-ID -1 is a False ID produced by tracker
+ID -1 is a false detection of tracker
+
+
 ======================================================================================================================
 
-Before, order by test date:
+Previously performed tests, order by test date:
 
-tests based on number of snapshots.
+Tests based on number of snapshots.
 
 VIDEODetectSpeed_and_ Counter_LicensePlate_Yolov8_Filters_PaddleOCR.py
 
