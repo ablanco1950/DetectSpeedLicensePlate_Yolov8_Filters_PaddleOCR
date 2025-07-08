@@ -14,13 +14,21 @@ python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py
 the results and comparison with the method based on the number of snapshots in which the car has been detected are:
 
 ID 2 AR606L speed by Snapshots = 18 22 Km/h, by pixel distance = 49. Km/h
+
 ID 3 AR606L speed by Snapshots = 17.23 Km/h, by pixel distance = 37. Km/h
+
 ID 5 AE670S speed by Snapshots = 18 22 Km/h, by pixel distance = 40. Km/h
+
 ID 8 APHI88 speed by Snapshots = 9 45 Km/h, by pixel distance = 122 Km/h
+
 ID -1 APHI88 speed by Snapshots = 1 405 Km/h, by pixel distance = 0 Km/h
+
 ID 10 A3K96 speed by Snapshots = 14 28 Km/h, by pixel distance = 67. Km/h
+
 ID 11 A968B6 speed by Snapshots = 5 81 Km/h, by pixel distance = 41. Km/h
+
 ID 12 AV6190 speed by Snapshots = 12.33 Km/h, by pixel distance = 70. Km/h
+
 
 prepared to work with the attached Traffic IP Camera video.mp4 test video
 
