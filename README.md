@@ -32,7 +32,7 @@ ID 12 AV6190 speed by Snapshots = 12.33 Km/h, by pixel distance = 70. Km/h
 
 prepared to work with the attached Traffic IP Camera video.mp4 test video
 
-ID 3 and ID4 are the same car, once identified as car and another as truck.
+ID 2 and ID 3 are the same car, once identified as car and another as truck.
 
 ID -1 is a false detection of tracker
 
