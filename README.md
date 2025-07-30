@@ -9,7 +9,7 @@ Of all the tests performed, the one that seems most suitable is based on establi
 
 Execute the program 
 
-python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py
+python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py (As of 07/29/2025, an incompatibility with the last roboflow tracker has been detected, so this program does not work. While waiting to resolve it, you can continue testing with the rest of the programs listed below.)
 
 the results and comparison with the method based on the number of snapshots in which the car has been detected are:
 
