@@ -1,15 +1,45 @@
 # DetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR
 This work is an extension of the project https://github.com/ablanco1950/LicensePlate_Yolov8_Filters_PaddleOCR adding the possibility to detect the speed, tracking and counting cars
 
-The requirements are exactly the same as those indicated in the aforementioned project.
+Since some programs combine elements of the RoboFlow tracker, Paddleocr, and Ultralytics; a manual installation is required, following these steps: (Installing from a requirements.txt file fails because pip can't resolve the dependencies.)
 
-A requirements.txt file is attatched.( paddleocr gives some warnings but works)
+Create a separate environment, which I refer to as NewEnv.
+In conda environment:
+in the directory root of the environment:
+
+(NewEnv) C:\Users\UserName  cd .conda\envs\NewEnv\Scripts>
+
+Going to directory:
+(NewEnv) C:\Users\UserName\.conda\envs\NewEnv\Scripts>
+
+In this directory: (ignoring the error messages that appear in red)
+
+>python pip-script.py install supervision
+
+>python pip-script.py install ultralytics
+
+>python pip-script.py install decorator
+
+>python pip-script.py install protobuf==3.20
+
+>python pip-script.py install shapely
+
+>python pip-script.py install pyclipper
+
+>python pip-script.py install scikit-image
+
+>python pip-script.py uninstall numpy==1.23
+
+>python pip-script.py install lmdb
+
+Copy the atached program  sort_utils.py to C:\Users\UserName\.conda\envs\NewEnv\Lib\site-packages\trackers\utils overwriting the sort_utils in it.
+
 
 Of all the tests performed, the one that seems most suitable is based on establishing the speed based on the distances between the current x2 y2 points of the ID assigned by the roboflow tracker and the x2y2 assigned by the tracker in the previous frame, and dividing by the time between frames.
 
 Execute the program 
 
-python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py (As of 07/29/2025, an incompatibility with the last roboflow tracker has been detected, so this program does not work. While waiting to resolve it, you can continue testing with the rest of the programs listed below.)
+python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py 
 
 the results and comparison with the method based on the number of snapshots in which the car has been detected are:
 
