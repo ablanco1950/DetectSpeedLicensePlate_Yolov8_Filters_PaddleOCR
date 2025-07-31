@@ -32,6 +32,8 @@ In this directory: (ignoring the error messages that appear in red)
 
 >python pip-script.py install lmdb
 
+>>python pip-script.py install imutils
+
 Copy the atached program  sort_utils.py to C:\Users\UserName\.conda\envs\NewEnv\Lib\site-packages\trackers\utils overwriting the sort_utils in it.
 
 
