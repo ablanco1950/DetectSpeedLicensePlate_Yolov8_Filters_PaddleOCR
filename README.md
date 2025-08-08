@@ -70,9 +70,9 @@ ID -1 is a false detection of tracker
 
 Another test using the OCR Api from Roboflow instead of paddleOCR:
 
-DetectSpeed_By_PixelsDistance_And_RoboflowTracker_RoboflowOCR.py
+python DetectSpeed_By_PixelsDistance_And_RoboflowTracker_RoboflowOCR.py
 
-For this is neccesary to get an api_key from roboflow and put it in line 6 of the programa
+For this is neccesary to get an api_key from roboflow (is free, https://app.roboflow.com/?ref=blog.roboflow.com)  and put it in line 6 of the programa
 
 Also install:
 
