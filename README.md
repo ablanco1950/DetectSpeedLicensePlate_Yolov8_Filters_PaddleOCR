@@ -68,7 +68,7 @@ ID 2 and ID 3 are the same car, once identified as car and another as truck.
 
 ID -1 is a false detection of tracker
 
-Another test using the OCR Api from Roboflow instead of paddleOCR:
+Another test using the OCR Api from Roboflow instead of paddleOCR (https://blog.roboflow.com/ocr-api/):
 
 python DetectSpeed_By_PixelsDistance_And_RoboflowTracker_RoboflowOCR.py
 
@@ -303,6 +303,8 @@ https://github.com/victorgzv/Lighting-correction-with-OpenCV
 https://medium.com/@yyuanli19/using-mnist-to-visualize-basic-conv-filtering-95d24679643e
 
 https://www.ultralytics.com/blog/how-to-use-ultralytics-yolo11-for-object-tracking?utm_source=newsletter&utm_medium=email&utm_term=2024-11-29&utm_campaign=+Ultralytics+Unplugged+-+Snapshot+2
+
+https://blog.roboflow.com/ocr-api/
 
 
 
