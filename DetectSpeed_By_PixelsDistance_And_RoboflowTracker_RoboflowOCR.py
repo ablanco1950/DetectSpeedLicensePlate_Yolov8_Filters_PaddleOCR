@@ -2,14 +2,15 @@
 # adapted and modified by Alfonso Blanco García
 
 # https://blog.roboflow.com/ocr-api/
+
+API_KEY=""
 import os
 from inference_sdk import InferenceHTTPClient
 
 CLIENT = InferenceHTTPClient(
     api_url="https://infer.roboflow.com",
-    #api_key=os.environ["CiZBQau4XYzOSC3FfmnU"]
-    #api_key=os.environ["CiZBQau4XYzOSC3FfmnU"]
-    api_key="CiZBQau4XYzOSC3FfmnU"
+    
+    api_key=API_KEY
     
 )
 
