@@ -28,7 +28,9 @@ In this directory: (ignoring the error messages that appear in red)
 
 >python pip-script.py install scikit-image
 
->python pip-script.py uninstall numpy==1.23
+>python pip-script.py uninstall numpy
+
+>python pip-script.py install numpy==1.23
 
 >python pip-script.py install lmdb
 
@@ -77,6 +79,10 @@ For this is neccesary to get an api_key from roboflow (is free, https://app.robo
 Also install:
 
 python pip-script.py install inference_sdk
+
+python pip-script.py uninstall numpy
+
+python pip-script.py install numpy==1.23
 
 
 
