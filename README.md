@@ -34,7 +34,10 @@ In this directory: (ignoring the error messages that appear in red)
 
 >python pip-script.py install lmdb
 
->>python pip-script.py install imutils
+>python pip-script.py install imutils
+
+>python pip-script.py install torchvision
+
 
 Copy the atached program  sort_utils.py to C:\Users\UserName\.conda\envs\NewEnv\Lib\site-packages\trackers\utils overwriting the sort_utils in it.
 
@@ -83,8 +86,6 @@ python pip-script.py install inference_sdk
 python pip-script.py uninstall numpy
 
 python pip-script.py install numpy==1.23
-
-
 
 
 ======================================================================================================================
