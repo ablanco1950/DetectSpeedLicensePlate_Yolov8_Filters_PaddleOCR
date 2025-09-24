@@ -73,7 +73,15 @@ ID 2 and ID 3 are the same car, once identified as car and another as truck.
 
 ID -1 is a false detection of tracker
 
-For speed estimation, the distance between pixels was considered and not the effect of perspective (in plain words, just as cars appear to decrease in size with distance, the same happens with the distance between pixels), because the camera is very close to the polygon in question, which also allows for reading the license plate numbers. Otherwise, would be considered 
+For speed estimation, the distance between pixels was considered and not the effect of perspective (in plain words, just as cars appear to decrease in size with distance, the same happens with the distance between pixels), because the camera is very close to the polygon in question, which also allows for reading the license plate numbers. Otherwise, would be considered: 
+
+https://blog.roboflow.com/estimate-speed-computer-vision/
+And would be necessary to consider and take measurements on the ground.
+
+Another project to consider would be:
+https://github.com/krishnapriya-nynaru/yolov11-vehicle-speed-tracker
+
+==============================================================================================================================
 
 Another test using the OCR Api from Roboflow instead of paddleOCR (https://blog.roboflow.com/ocr-api/):
 
@@ -90,11 +98,7 @@ python pip-script.py uninstall numpy
 python pip-script.py install numpy==1.23
 
 
-https://blog.roboflow.com/estimate-speed-computer-vision/
-And would be necessary to consider and take measurements on the ground.
 
-Another project to consider would be:
-https://github.com/krishnapriya-nynaru/yolov11-vehicle-speed-tracker
 
 ======================================================================================================================
 
