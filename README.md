@@ -44,7 +44,7 @@ Copy the atached program  sort_utils.py to C:\Users\UserName\.conda\envs\NewEnv\
 
 Of all the tests performed, the one that seems most suitable is based on establishing the speed based on the distances between the current x2 y2 points of the ID assigned by the roboflow tracker and the x2y2 assigned by the tracker in the previous frame, and dividing by the time between frames.
 
-Execute the program 
+From the project directory execute the program 
 
 python DetectSpeed_By_PixelsDistance_And_RoboflowTracker.py 
 
