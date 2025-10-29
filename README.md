@@ -12,7 +12,7 @@ in the directory root of the environment:
 Going to directory:
 (NewEnv) C:\Users\UserName\.conda\envs\NewEnv\Scripts>
 
-In this directory: (ignoring the error messages that appear in red) ( But a requirements.txt is attached)
+In this directory: (ignoring the error messages that appear in red) 
 
 >python pip-script.py install supervision
 
