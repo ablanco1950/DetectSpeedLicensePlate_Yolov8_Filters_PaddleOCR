@@ -108,7 +108,7 @@ Previously performed tests, order by test date:
 
 Tests based on number of snapshots:
 
-VIDEODetectSpeed_and_ Counter_LicensePlate_Yolov8_Filters_PaddleOCR.py
+python "VIDEODetectSpeed_and_ Counter_LicensePlate_Yolov8_Filters_PaddleOCR.py"
 
 This presentation participated in a Ready Tensor tournament and has since been updated to feature and leverage improvements brought by Roboflow and Ultralytics.
 
