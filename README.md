@@ -28,6 +28,8 @@ In this directory: (ignoring the error messages that appear in red)
 
 >python pip-script.py install scikit-image
 
+>python pip-script.py install trackers
+
 >python pip-script.py uninstall numpy
 
 >python pip-script.py install numpy==1.23
