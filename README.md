@@ -1,7 +1,7 @@
 # DetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR
 This work is an extension of the project https://github.com/ablanco1950/LicensePlate_Yolov8_Filters_PaddleOCR adding the possibility to detect the speed, tracking and counting cars
 
-Since some programs combine elements of the RoboFlow tracker, Paddleocr, and Ultralytics; a manual installation is required, following these steps: (Installing from the requirements.txt file attached, may fail because pip can't resolve the dependencies.)
+Since some programs combine elements of the RoboFlow tracker, Paddleocr, and Ultralytics; a manual installation is required, following these steps: (Installing from the requirements.txt file attached, may fail because pip can't resolve the dependencies and the project needs numpy 1.23 while with requirements installing trackers would install a higher version)
 
 Create a separate environment, which I refer to as NewEnv.
 In conda environment:
