@@ -9,7 +9,7 @@ Installation:
 
 Download the project to a folder on your hard drive, then extract the zip files located in the downloaded folder.
 
-It is advisable to install it in a fresh environment. The requirements.txt file contains the necessary modules and their versions. It is important to note that an older version of supervision (=0.25) must be installed, as the latest version (as of May 6, 2026) is incompatible with Roboflow trackers.
+It is advisable to install it in a new environment. The requirements.txt file contains the necessary modules and their versions. It is important to note that an older version of supervision (==0.25) must be installed, as the latest version (as of May 6, 2026) is incompatible with Roboflow trackers.
 
 Test:
 
