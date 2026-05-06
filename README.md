@@ -17,6 +17,13 @@ Run the program:
 
 python DetectSpeed_By_PixelsDistance_And_RoboflowTracker_Paddleocr3.5.py
 
+For speed estimation, the distance between pixels is considered and not the effect of perspective (in plain words, just as cars appear to decrease in size with distance, the same happens with the distance between pixels), because the camera is very close to the polygon in question, which also allows for reading the license plate numbers. Otherwise, would be considered:
+
+https://blog.roboflow.com/estimate-speed-computer-vision/ And would be necessary to consider and take measurements on the ground.
+
+Another project to consider would be: https://github.com/krishnapriya-nynaru/yolov11-vehicle-speed-tracker
+
+
 OLDS VERSIONS
 =================================================================================================================================================
 
