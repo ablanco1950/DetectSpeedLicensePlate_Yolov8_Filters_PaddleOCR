@@ -1,15 +1,33 @@
 # DetectSpeedLicensePlate_Yolov8_Filters_PaddleOCR
 This work is an extension of the project https://github.com/ablanco1950/LicensePlate_Yolov8_Filters_PaddleOCR adding the possibility to detect the speed, tracking and counting cars
 
-May 6, 2026
+15/08/2026
 
-Update to Paddleocr version 3.5
+Update to PaddleOCR-VL (is compatible with paddleoce3.5)
 
-Installation:
+Requirements:
 
-Download the project to a folder on your hard drive, then extract the zip files located in the downloaded folder.
+Enviroment with python 3.12
 
-It is advisable to install it in a new environment. The requirements.txt file contains the necessary modules and their versions. It is important to note that an older version of supervision (==0.25) must be installed, as the latest version (as of May 6, 2026) is incompatible with Roboflow trackers.
+pip install paddlepaddle -i https://www.paddlepaddle.org.cn/packages/stable/cpu/ The Program was tested to cpu
+
+pip install "paddleocr>=3.7.0"
+
+pip install ultralytics --user
+
+pip install imutils
+
+pip install scipy
+
+pip install scikit-image
+
+pip  install trackers
+
+pip install opencv-contrib-python
+
+pip  install supervision
+
+A requirements.txt file is attached
 
 Test:
 
