@@ -25,10 +25,10 @@ import cv2
 # https://github.com/Saafke/FSRCNN_Tensorflow/tree/master/models
 # https://learnopencv.com/super-resolution-in-opencv/#sec5
 # https://learnopencv.com/super-resolution-in-opencv/
-ocv_model = cv2.dnn_superres.DnnSuperResImpl_create()
-ocv_weight = 'FSRCNN_x4.pb'
-ocv_model.readModel(ocv_weight)
-ocv_model.setModel('fsrcnn', 4)
+#ocv_model = cv2.dnn_superres.DnnSuperResImpl_create()
+#ocv_weight = 'FSRCNN_x4.pb'
+#ocv_model.readModel(ocv_weight)
+#ocv_model.setModel('fsrcnn', 4)
 
 
 import time
@@ -478,7 +478,7 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
         
        
        
-    """
+   
     gray1= ocv_model.upsample(gray)
     #cv2.imshow("Ocv",gray1)
     #cv2.waitKey()
@@ -498,7 +498,7 @@ def FindLicenseNumber (gray, x_offset, y_offset,  License, x_resize, y_resize, \
                 print(License + " detected with Filter FSRCNN "+ text) 
                
     
-    
+    """
     gray1=Otsu2Values(gray)
     #cv2.imshow("Otsu2",gray1)
     #cv2.waitKey()
