@@ -9,7 +9,9 @@ Requirements:
 
 Enviroment with python 3.12
 
-pip install paddlepaddle -i https://www.paddlepaddle.org.cn/packages/stable/cpu/ The Program was tested to cpu
+pip install paddlepaddle -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
+
+The Program was tested to cpu
 
 pip install "paddleocr>=3.7.0"
 
